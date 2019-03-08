@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Divisas1"
+             x:Class="Divisas1.MainPage">
+    <ScrollView>
+          <StackLayout Spacing="10" Padding="15">
+             
+            <Label Text="Divisas" 
+                   FontSize="30"
+                   FontAttributes="Bold"
+             HorizontalOptions="Center"
+             VerticalOptions="Center" />
+            <Label Text="Ingrese valor, seleccione moneda origen, seleccione moneda destino y presione el boton Convertir." 
+             HorizontalOptions="Start"
+             VerticalOptions="Center" />
+
+            <Entry x:Name="amountEntry"
+                   Placeholder="Ingrese Valor"
+                   Keyboard="Numeric"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="Center"/>
+            <Picker x:Name="sourcePicker"
+                       Title="Seleccione moneda origen"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Center" >
+             </Picker>
+            <Picker x:Name="targetPicker"
+                       Title="Seleccione moneda destino"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Center" >
+            </Picker>
+
+            <Button x:Name="convertButton"
+                    IsEnabled="False"
+                    Text="Convertir"
+                    BackgroundColor="Green"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Center">
+             </Button>
+            <ActivityIndicator x:Name="waitActivityIndicator"
+                  IsRunning="False"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center">
+             </ActivityIndicator>
+            <Label x:Name="convertedLabel"
+                   BackgroundColor="Gray"
+                   FontSize="20"
+                   Text="No se han realizado conversiones"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand">
+                
+            </Label>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
